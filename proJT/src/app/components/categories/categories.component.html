@@ -1,0 +1,13 @@
+<!-- Categories Section -->
+<div class="container" id="trending">
+    <h2>Trending categories</h2>
+  </div>
+  <section class="categories">
+    <div class="categories-container">
+      <div class="category-card" *ngFor="let category of categories">
+        <p class="category-number">{{ category.number }}</p>
+        <p class="category-name">{{ category.name }}</p>
+        <p class="category-arrow">{{ category.arrow }}</p>
+      </div>
+    </div>
+  </section>

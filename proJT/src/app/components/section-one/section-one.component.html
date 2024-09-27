@@ -1,0 +1,65 @@
+<!-- Main Panel -->
+<section class="page-section" id="main">
+    <div class="container" id="first">
+      <div class="text" id="start-text">
+        <h1>start <span class="orange-word">streaming</span> games differently</h1>
+      </div>
+      <div id="textTwo">
+        <h4>gamer new has stream party platform</h4>
+      </div>
+      <div class="login">
+        <ul class="login-account">
+          <li class="nav-item" id="account">
+            <a class="nav-link" id="create" [routerLink]="['/account']">Create account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="login" [routerLink]="['/login']" (click)="onLoginClick()">Sign in</a>
+          </li>
+         </ul>
+      </div>
+    </div>
+  
+    <div class="second">
+      <div class="container">
+        <div class="season">
+          <h3>Fornite New Season</h3>
+        </div>
+        <div class="live-stream-text">
+          <h4>{{ liveStreamText }}</h4>
+        </div>
+        <div class="page">
+          <h5>11 : 45</h5>
+        </div>
+       </div>
+       <div class="imag" >
+        <app-imagen></app-imagen>
+       </div>
+    </div>
+  
+    <div class="container" id="three">
+      <div class="container" id="list">
+        <div id="choose">
+          <h4>01. Choose Platform</h4>
+        </div>
+        <div class="choose">
+          <div class="choose-group">
+              <ul>
+                <li class="nav-item" id="party"><a class="nav-link" href="#party"><span>🎉</span> Party</a></li>
+                <li class="nav-item"><a class="nav-link" href="#matchs">Matchs</a></li>
+                <li class="nav-item"><a class="nav-link" href="#streams">Streams</a></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div id="search-text">
+          <h4>02. Searching Game</h4>
+        </div>
+        <!-- Placeholder for game filter -->
+        <app-user-list (userAdded)="updateLiveStreamText($event)"></app-user-list>
+      </div>
+    </div>
+     
+   <!-- Placeholder for routing -->
+   <router-outlet></router-outlet>
+  </section>

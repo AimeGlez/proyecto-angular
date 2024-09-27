@@ -1,0 +1,21 @@
+<div class="home-container">
+    <!-- Menu Header -->
+    <app-menu-header (loginRequested)="onLoginRequested()"></app-menu-header>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Section One -->
+      <app-section-one (filterRequested)="onFilterRequested()">
+      </app-section-one>
+      <!-- Categories -->
+      <app-categories></app-categories>
+    </div>
+  </div>
+  
+  <!-- Conditionally show the login component -->
+  <ng-container *ngIf="showLogin">
+    <app-login (loginClosed)="onLoginClosed()"></app-login>
+
+  
+ 
+  </ng-container>

@@ -1,0 +1,48 @@
+<div class="user-panel">
+  <div class="start">
+    <div class="container" id="warzone">
+      <h4>COD Warzone</h4>
+      <button class="theme" (click)="toggleTheme()">
+        <i [ngClass]="isDarkTheme ? 'fas fa-soon': 'fas fa-moon'" class=""></i>
+      </button>
+    </div>
+    <hr class="separator" />
+  
+    <!-- Results Section -->
+    <div class="results-section">
+      <ul class="user-list">
+        <li *ngFor="let user of filteredUsers" class="user-item">
+          <span class="user-id">{{ user.id }}</span>
+          <span class="user-name">{{ user.name }}</span>
+          <button (click)="addUser(user)" class="add-button">+</button>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Added Users Section -->
+    <div class="added-users-section">
+      <ul>
+        <li *ngFor="let user of addedUsers">
+          {{ user.id }}. {{ user.name }}
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Search Section -->
+    <div class="search-section" *ngIf="showSearch">
+       <div class="input">
+        <input 
+        [(ngModel)]="searchQuery"
+        type="text"
+        placeholder="Search users..."
+        class="search-input"
+        (input)="onSearchInput()"
+      />
+       </div>
+    </div>
+  
+    <button (click)="toggleSearch()" class="search-button">
+      Search Now
+    </button>
+  </div>
+</div>

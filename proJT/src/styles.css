@@ -1,0 +1,559 @@
+/* Estilos globales */
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #1ab0be;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-black: #000;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #1ab0be;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc800;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 26, 176, 190;
+    --bs-secondary-rgb: 108, 117, 125;
+    --bs-success-rgb: 25, 135, 84;
+    --bs-info-rgb: 13, 202, 240;
+    --bs-warning-rgb: 255, 200, 0;
+    --bs-danger-rgb: 220, 53, 69;
+    --bs-light-rgb: 248, 249, 250;
+    --bs-dark-rgb: 33, 37, 41;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-black-rgb: 0, 0, 0;
+    --bs-body-color-rgb: 33, 37, 41;
+    --bs-body-bg-rgb: 255, 255, 255;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-body-font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #212529;
+    --bs-body-bg: #fff;
+    --bs-border-width: 1px;
+    --bs-border-style: solid;
+    --bs-border-color: #dee2e6;
+    --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+    --bs-border-radius: 0.375rem;
+    --bs-border-radius-sm: 0.25rem;
+    --bs-border-radius-lg: 0.5rem;
+    --bs-border-radius-xl: 1rem;
+    --bs-border-radius-2xl: 2rem;
+    --bs-border-radius-pill: 50rem;
+    --bs-link-color: #1ab0be;
+    --bs-link-hover-color: #1ab0be;
+    --bs-code-color: #d63384;
+    --bs-highlight-bg: #fff4cc;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    :root {
+      scroll-behavior: smooth;
+    }
+  }
+  body {
+    margin: 50px;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: rgb(255, 250, 250) ;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }  
+  hr {
+    margin: 1rem 0;
+    color: inherit;
+    border: 0;
+    border-top: 1px solid;
+    opacity: 0.25;
+  }
+  
+  h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+  
+  h1, .h1 {
+    font-size: calc(1.375rem + 1.5vw);
+  }
+  @media (min-width: 1200px) {
+    h1, .h1 {
+      font-size: 2.5rem;
+      font-weight: 500;
+    }
+  }
+  
+  h2, .h2 {
+    font-size: calc(1.325rem + 0.9vw);
+  }
+  @media (min-width: 1200px) {
+    h2, .h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  h3, .h3 {
+    font-size: calc(1.2rem + 0.6vw);
+  }
+  @media (min-width: 1200px) {
+    h3, .h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    h4, .h4 {
+      font-size: 0.95rem;
+    }
+  }
+  
+  a {
+    color: var(--bs-link-color);
+    text-decoration: underline;
+  }
+  a:hover {
+    color: var(--bs-link-hover-color);
+  }
+  
+  a:not([href]):not([class]), a:not([href]):not([class]):hover {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  img,
+  svg {
+    vertical-align: middle;
+  }
+  
+  /* Ajuste de pantalla*/
+  
+  /* Adaptar el ancho de los contenedores */
+  .container {
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Ajuste del main-board */
+  .main-board {
+    width: 100%;
+    margin: 35px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }  
+ 
+  /* Mejora en la visualización de botones y enlaces */
+   #button {
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+  }
+  
+  /* Ajustar categorías para pantallas pequeñas */
+  .categories {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  /* Media queries para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .choose-group, #search, .page-section, .categories  {
+        width: 50%;
+        text-align: center;
+        
+    }
+    .navbar {
+        flex-direction: column;
+    }
+  
+    .main-board, .categories {
+        grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 1080px) {
+    .choose-group, #search, .page-section, .categories  {
+        width: 50%;
+        text-align: center;
+        
+    }
+    .navbar {
+        flex-direction: column;
+    }
+  
+    .main-board, .categories {
+        grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Adaptar el ancho de los contenedores */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .page-section {
+    width: 50%;
+  }
+ 
+  /* Ajuste del main-board */
+  .main-board {
+    width: 100%;
+    margin: 35px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Mejora en la visualización de botones y enlaces */
+  .nav-item, #button {
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+  }
+  li {
+    list-style: none; 
+    padding-left: 0;
+    margin: 0;
+    margin-right: 0px;
+    margin-left: 0px;
+    display: inline-block;
+    
+  }
+  
+  /* Ajustar categorías para pantallas pequeñas */
+  .categories {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  /* Media queries para pantallas más pequeñas */
+  @media (max-width: 480px) {
+    .main-board, .choose, #search, #three {
+        width: 100%;
+        text-align: center;
+    }
+  
+    .navbar {
+        flex-direction: column;
+    }
+  
+    .main-board, .categories {
+        grid-template-columns: 1fr;
+    }
+}
+  
+  /* Definición de variables para el tema claro */
+:root {
+  --background-color: white;
+  --text-color: black;
+  --button-background: #2f3e4d;
+  --button-text: white;
+  --font-color:var(--bs-white);
+}
+
+/* Estilos para el tema claro */
+.light-theme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.light-theme button {
+  background-color: var(--button-background);
+  color: var(--button-text);
+}
+
+/* Definición de variables para el tema oscuro */
+/* Definición de variables para el tema oscuro */
+.dark-theme { 
+  --background-color: rgb(26, 25, 25);
+  --text-color: white; /* Asegura que el texto sea blanco */
+  --background-color-section: var(--bs-gray-900);
+  --button-background: #333;
+  --button-text: #e0e0e0;
+  --border-color: #1e1e1e;
+  --background-color-second: var(--bs-orange);
+  --color:var(--bs-body-bg)
+}
+
+/* Estilos para el tema oscuro */
+.dark-theme {
+  background-color: var(--background-color);
+  color: var(--text-color); /* Utiliza la variable para el color del texto */
+}
+
+.dark-theme h4, .dark-theme h1, .dark-theme h3 {
+  color: var(--text-color); /* Aplica a los encabezados */
+}
+
+.dark-theme p, .dark-theme li, .dark-theme a {
+  color: var(--text-color); /* Aplica a párrafos, listas y enlaces */
+}
+
+/* Estilos para la sección específica del panel */
+.dark-theme #first, .dark-theme #second, .dark-theme #three {
+  background-color: var(--background-color-section); /* Fondo oscuro */
+  color: var(--text-color); /* Texto blanco */
+}
+
+/* Botones en tema oscuro */
+.dark-theme button {
+  background-color: var(--button-background);
+  color: var(--button-text);
+}
+
+/* Estilos para el UserListComponent */
+.dark-theme .user-panel {
+  background-color: var(--background-color); /* Fondo oscuro */
+  color: var(--text-color); /* Texto blanco */
+}
+
+.dark-theme .user-panel .user-item {
+  color: var(--text-color);
+}
+
+.dark-theme .user-panel .added-users-section {
+  color: var(--text-color);
+}
+
+.dark-theme .user-panel button.add-button {
+  background-color: var(--button-background);
+  color: var(--button-text);
+}
+
+/* Estilos para el tema claro */
+.light-theme .navbar-nav .nav-item {
+  background-color: white;
+}
+
+.light-theme .navbar-nav .nav-link {
+  color: black;
+}
+
+/* Estilos específicos para el elemento "Create account" en el tema claro */
+.light-theme .navbar-nav .nav-item:last-child .nav-link {
+  background-color: black;
+  color:  var(--text-color); 
+}
+
+
+/* Estilos para el tema oscuro */
+.dark-theme .navbar-nav .nav-item {
+  background-color: rgb(26, 25, 25);
+}
+
+.dark-theme .navbar-nav .nav-item:last-child {
+  color: black
+}
+
+
+.dark-theme .page-section .nav-item {
+  color: var(--text-color); 
+}
+
+.dark-theme .navbar-nav .nav-link {
+  color: var(--text-color); 
+}
+
+/* Estilos específicos para el elemento "Create account" en el tema oscuro */
+.dark-theme .navbar-nav .nav-item:last-child .nav-link {
+  background-color: white;
+  color: black;
+}
+
+.dark-theme .navbar-nav .nav-item #home{
+  color: rgba(255, 106, 0, 0.732); ;
+}
+
+
+/* Cambios específicos para el tema oscuro */
+.dark-theme #first {
+  background-color:var(--bs-gray-900);
+  color: white; /* Texto blanco */
+}
+.dark-theme #second {
+  background-color:#01060e;
+  color: white; /* Texto blanco */
+}
+.dark-theme #three {
+  background-color:var(--bs-gray-900); /* Fondo oscuro */
+  color: white; /* Texto blanco */
+}
+.dark-theme  {
+  background-color: rgb(26, 25, 25); /* Fondo oscuro */
+  color: white; /* Texto blanco */
+}
+/* Cambios para el botón "Search Now" */
+.dark-theme #search-text button {
+  background-color: white; /* Fondo blanco */
+  color: black; /* Letras negras */
+}
+
+/* Estilo para el texto que debe ser gris */
+.dark-theme .live-stream-text h4 {
+  color: rgb(108, 108, 108); /* Gris para el "Join" text */
+}
+
+/* Fondo del panel central */
+.dark-theme .page-section .second {
+  background-color: rgba(255, 106, 0, 0.852); /* Cambiar el fondo a naranja */
+}
+.dark-theme .page-section .theme {
+  color: white;
+}
+
+.dark-theme .choose-group .nav-item:first-child .nav-link {
+  color:white;
+  background-color: rgb(29, 28, 28); 
+}
+
+.dark-theme .choose-group  #party {
+  background-color: rgb(26, 25, 25); 
+}
+.dark-theme .choose-group  #party .nav-item {
+  background-color: rgb(26, 25, 25); 
+}
+.dark-theme .choose {
+  background-color: rgb(26, 25, 25); 
+
+}
+
+.dark-theme .choose-group .nav-item:nth-child(2) .nav-link {
+  color:white;
+}
+.dark-theme .choose-group .nav-item:last-child .nav-link {
+  color:white;
+}
+
+.dark-theme .login .nav-item:first-child {
+  color:white;
+}
+
+.dark-theme #first #start-text .orange-word {
+  color: #6f42c1;
+}
+
+.dark-theme .user-panel .user-item:first-child {
+  background-color: rgb(27, 26, 26); 
+}
+.dark-theme .user-panel .user-item:nth-child(2) {
+  background-color:  rgb(27, 26, 26); 
+}
+.dark-theme .user-panel .user-item:nth-child(3) {
+  background-color:  rgb(27, 26, 26); 
+}
+.dark-theme .user-panel .user-item:nth-child(4) {
+  background-color: rgb(27, 26, 26); 
+}
+.dark-theme .user-panel .user-item:nth-child(5) {
+  background-color: rgb(27, 26, 26); 
+}
+
+.dark-theme .user-panel .search-button {
+  background-color: white;
+  color: #000;
+}
+.dark-theme .user-panel .search-section {
+  background-color: rgb(27, 26, 26); 
+}
+.light-theme .user-panel .search-section {
+  background-color: #f9f9f9;
+}
+.dark-theme .user-panel .search-button {
+  background-color: white;
+  color: #000;
+}
+
+.dark-theme .user-panel .container {
+  background-color:  rgb(27, 26, 26); 
+}
+
+.dark-theme .user-panel .added-users-section {
+  background-color: rgb(27, 26, 26);  
+}
+
+.dark-theme .user-panel .added-users-section-fixed-section{
+  background-color: rgb(27, 26, 26);  
+}
+
+.dark-theme .user-panel .start {
+  background-color:  rgb(27, 26, 26); 
+}
+
+.dark-theme .page-section .login #create {
+  background-color: rgb(27, 26, 26); 
+  color: white;
+}
+
+.dark-theme .page-section .login .nav-item #login {
+  color: white;
+}
+
+.dark-theme .login .login-account #account {
+  background-color:  rgb(27, 26, 26);
+}
+
+.dark-theme .categories .category-card {
+  background-color:var(--bs-gray-900);
+}
+
+.dark-theme .login-panel .login-title {
+  color: white;
+}
+
+.dark-theme .login-panel .card {
+background-color:  rgb(36, 34, 34); ;
+}
+
+.dark-theme .login-panel .card .btn-primary {
+  background-color: #0d6efd;
+}
+
+.dark-theme .page-section .second h5{
+   color:#000;
+}
+
+.dark-theme .page-section #three {
+  background-color:var(--bs-gray-900);
+}
+
+.dark-theme .page-section .imag {
+  background-image: var(--bs-orange);
+}
+
+.dark-theme .user-panel .theme {
+  color: white;
+}
+
